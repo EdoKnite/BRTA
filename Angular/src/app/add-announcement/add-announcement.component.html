@@ -1,0 +1,19 @@
+<form>
+    <input matInput [(ngModel)]="Author" [ngModelOptions]="{standalone: true}" placeholder="Author"/>
+    <input matInput [(ngModel)]="ImageUrl" [ngModelOptions]="{standalone: true}" placeholder="ImageUrl"/>
+    <input matInput [(ngModel)]="Title" [ngModelOptions]="{standalone: true}" placeholder="Title"/>
+    <input matInput [(ngModel)]="Message" [ngModelOptions]="{standalone: true}" placeholder="Message"/>
+    <input matInput [(ngModel)]="CategoryId" [ngModelOptions]="{standalone: true}" placeholder="CategoryId"/>
+    <input matInput [(ngModel)]="Description" [ngModelOptions]="{standalone: true}" placeholder="Description"/>
+</form>
+
+<mat-form-field appearance="fill">
+    <mat-select [(value)]="selectedCategory">
+      <mat-option value ="General">General</mat-option>
+      <mat-option value ="Course">Course</mat-option>
+      <mat-option value ="Laboratory">Laboratory</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+<button (click)="addAnnouncement()" [routerLink]="['']">Add</button>
+<button [routerLink]="['']">Cancel</button>

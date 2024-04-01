@@ -1,0 +1,14 @@
+<div class="announcement-container">
+  <span class="title">{{ announcement.title }}</span>
+  <p classs="message">{{ announcement.message }}</p>
+  <span class="author">{{ announcement.author }}</span>
+
+  <button
+  mat-button
+  color="warn"
+  (click)="deleteAnnouncement()"
+  [routerLink]="['']"
+>
+  Delete
+</button>
+</div>
